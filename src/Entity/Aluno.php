@@ -12,12 +12,12 @@ class Aluno
      * @GeneratedValue
      * @Column(type="integer")
      */
-    private $id;
+    private int $id;
 
     /**
      * @Column(type="string")
      */
-    private $nome;
+    private string $nome;
 
     public function getId(): int
     {
