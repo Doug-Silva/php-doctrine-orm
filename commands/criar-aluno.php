@@ -11,6 +11,7 @@ $aluno->setNome('Vinicius Dias');
 $entityManagerFactory = new EntityManagerFactory();
 $entityManager = $entityManagerFactory->getEntityManager();
 
+//persistir no banco de dados
 $entityManager->persist($aluno);
 
-$entityManager->flush();
+$entityManager->flush(;
