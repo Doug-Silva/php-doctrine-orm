@@ -13,6 +13,7 @@ class EntityManagerFactory
         $rootDir = __DIR__ . '/../..';
         $config = Setup::createAnnotationMetadataConfiguration([$rootDir . '/src'], true);
 
+        //conexao com bd
         $connection = [
             'driver' => 'pdo_sqlite',
             'path' => $rootDir . '/var/data/banco.sqlite'
