@@ -10,6 +10,7 @@ class EntityManagerFactory
 {
     public function getEntityManager(): EntityManagerInterface
     {
+        //diretorio root
         $rootDir = __DIR__ . '/../..';
         $config = Setup::createAnnotationMetadataConfiguration([$rootDir . '/src'], true);
 
