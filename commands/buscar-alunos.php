@@ -17,6 +17,5 @@ foreach ($alunoList as $aluno) {
     echo "ID: {$aluno->getId()}\nNome: {$aluno->getNome()}\n\n";
 }
 
-//exibir um aluno especifico
 $nico = $alunoRepository->find(3);
 echo $nico->getNome();
