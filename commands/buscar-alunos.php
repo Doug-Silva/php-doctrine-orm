@@ -13,6 +13,7 @@ $alunoRepository = $entityManager->getRepository(Aluno::class);
 /** @var Aluno[] $alunoList */
 $alunoList = $alunoRepository->findAll();
 
+//buscando aluno
 foreach ($alunoList as $aluno) {
     echo "ID: {$aluno->getId()}\nNome: {$aluno->getNome()}\n\n";
 }
