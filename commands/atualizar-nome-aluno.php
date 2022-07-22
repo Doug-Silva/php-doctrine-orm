@@ -10,12 +10,10 @@ $entityManager = $entityManagerFactory->getEntityManager();
 
 $alunoRepository = $entityManager->getRepository(Aluno::class);
 
-/** @var Aluno[] $alunoList */
-$alunoList = $alunoRepository->findAll();
+$id = $argv[1];
+$novoNome = $argv[2];
 
-foreach ($alunoList as $aluno) {
-    echo "ID: {$aluno->getId()}\nNome: {$aluno->getNome()}\n\n";
-}
+$aluno = $alunoRepository->find($id);
+$aluno->setNome($novoNome);
 
-$nico = $alunoRepository->find(3);
-echo $nico->getNome();
+$entityManager->flush();
