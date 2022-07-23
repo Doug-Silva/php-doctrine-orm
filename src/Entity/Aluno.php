@@ -15,17 +15,17 @@ class Aluno
      * @GeneratedValue
      * @Column(type="integer")
      */
-    private int $id;
+    private $id;
 
     /**
      * @Column(type="string")
      */
-    private string $nome;
+    private $nome;
 
     /**
-     * @oneToMany(targetEntity="Telefone", mappedBy="aluno")
+     * @oneToMany(targetEntity="Telefone", mappedBy="aluno", cascade={"remove", "persist"})
      */
-    private string $telefones;
+    private $telefones;
 
     public function __construct()
     {

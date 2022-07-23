@@ -12,12 +12,12 @@ class Telefone
      * @GeneratedValue
      * @Column(type="integer")
      */
-    private int $id;
+    private $id;
 
     /**
      * @Column(type="string")
      */
-    private string $numero;
+    private $numero;
 
     /**
      * @ManyToOne(targetEntity="Aluno")
